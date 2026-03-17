@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.2", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unicamp_effects"
+description = "Effects for images created in the EA979 course (FEEC/UNICAMP)"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">= 3.10"
+dynamic = ["version"]
+dependencies = ["numpy", "pillow", "opencv-python"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+
+[tool.setuptools]
+include-package-data = true
+package-dir = { "" = "src" }
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
