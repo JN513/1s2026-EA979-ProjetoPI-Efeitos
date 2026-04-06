@@ -11,7 +11,6 @@ def edge_detection(img: np.ndarray) -> np.ndarray:
 
     # Máscaras de Sobel
     Sv = np.array([[1,0,-1],[2,0,-2],[1,0,-1]])
-
     Sh = np.array([[1,2,1],[0,0,0],[-1,-2,-1]])
 
     # Convolucoes
